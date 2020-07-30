@@ -3,7 +3,7 @@ import React from 'react'
 import logo from '../../assets/imagens/alura.png'
 import './menu.css'
 import LinkBotao from './LinkBotao/linkBotao'
-
+import LinkBotao_cstylcmp from '../Btn_stl/btn_stl'
 
 function Menu() {
     return (
@@ -12,9 +12,9 @@ function Menu() {
                <img className="Logo" src={logo} alt="aluraflix" />              
             </a>
               
-            <LinkBotao className="linkBotao" href="/">
+            <LinkBotao_cstylcmp  href="/"> {/* className="linkBotao" */}
                Novo vídeo
-            </LinkBotao>
+            </LinkBotao_cstylcmp>
         </nav>
     )
 }
