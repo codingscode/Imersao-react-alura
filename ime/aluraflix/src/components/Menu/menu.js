@@ -2,6 +2,7 @@ import React from 'react'
 
 import logo from '../../assets/imagens/alura.png'
 import './menu.css'
+import LinkBotao from './LinkBotao/linkBotao'
 
 
 function Menu() {
@@ -11,9 +12,9 @@ function Menu() {
                <img className="Logo" src={logo} alt="aluraflix" />              
             </a>
               
-            <a className="linkBotao" href="/">
+            <LinkBotao className="linkBotao" href="/">
                Novo vídeo
-            </a>
+            </LinkBotao>
         </nav>
     )
 }
