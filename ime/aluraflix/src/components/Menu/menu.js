@@ -11,6 +11,9 @@ function Menu() {
                <img className="Logo" src={logo} alt="aluraflix" />              
             </a>
               
+            <a className="linkBotao" href="/">
+               Novo vídeo
+            </a>
         </nav>
     )
 }
