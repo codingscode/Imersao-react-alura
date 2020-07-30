@@ -6,9 +6,11 @@ import './menu.css'
 
 function Menu() {
     return (
-        <nav>
-            <img className="Logo" src={logo} alt="aluraflix" />
-            
+        <nav className="Menu">
+            <a href="/">
+               <img className="Logo" src={logo} alt="aluraflix" />              
+            </a>
+              
         </nav>
     )
 }

@@ -24,8 +24,8 @@
     padding-left: 5%;
     padding-right: 5%;
   
-    background: var(--black);
-    border-bottom: 2px solid var(--primary);
+    background: var(--preto);
+    border-bottom: 2px solid var(--primario);
 }
 
 body {
@@ -45,9 +45,9 @@ body {
     }
 }
   
-.ButtonLink {
-    color: var(--white);
-    border: 1px solid var(--white);
+.linkBotao {
+    color: var(--branco);
+    border: 1px solid var(--branco);
     box-sizing: border-box;
     cursor: pointer;
     padding: 16px 24px;
@@ -61,17 +61,17 @@ body {
     transition: opacity .3s;
 }
 
-.ButtonLink:hover, .ButtonLink:focus {
+.linkBotao:hover, .linkBotao:focus {
     opacity: .5;
 }
   
 @media (max-width: 800px) {
-    a.ButtonLink {
+    a.linkBotao {
       position: fixed;
       left: 0;
       right: 0;
       bottom: 0;
-      background: var(--primary);
+      background: var(--primario);
       border-radius: 0;
       border: 0;
       text-align: center;
