@@ -13,7 +13,7 @@ npx create-react-app aluraflix
 p 1:
 https://www.alura.com.br/imersao-react/aula01-react-aluraflix?utm_campaign=imersao_react_aula_01&utm_medium=email&utm_source=RD+Station
 https://gist.github.com/omariosouto/19dafd5ca155c46b3dcb31df89cfba55
-
+        41min
 
 
 p2:
@@ -24,7 +24,8 @@ p3:
 https://www.alura.com.br/imersao-react/aula03-formularios-componentes?utm_campaign=imersao_react_aula_03&utm_medium=email&utm_source=RD+Station
 
 
-
+p4:
+https://www.alura.com.br/imersao-react/aula04-ajax-validacao?utm_campaign=imersao_react_aula_04&utm_medium=email&utm_source=RD+Station
 
 
 
