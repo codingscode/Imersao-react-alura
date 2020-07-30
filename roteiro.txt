@@ -4,6 +4,7 @@ https://pt-br.reactjs.org/docs/create-a-new-react-app.html
 digitar no terminal da pasta a ser usada:
 npx create-react-app aluraflix
 
+digitar no terminal:  npm i styled-components
 
 
 

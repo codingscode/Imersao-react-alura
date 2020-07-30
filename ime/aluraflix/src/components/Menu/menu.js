@@ -13,7 +13,7 @@ function Menu() {
             </a>
               
             <LinkBotao className="linkBotao" href="/">
-              Prop específica chamada children (ver console)
+               Novo vídeo
             </LinkBotao>
         </nav>
     )
