@@ -4,11 +4,11 @@ import Menu from '../Menu/menu'
 import Rodape from '../Rodape/rodape'
 
 
-function PaginaDefault() {
+function PaginaDefault(props) {  // ou {children}
      return (
          <div>
             <Menu />
-
+             {props.children}   {/* ou {children} */}
             <Rodape />
          
          </div>
@@ -18,3 +18,4 @@ function PaginaDefault() {
 }
 
 export default PaginaDefault
+// ver http://localhost:3000/cadastro/video
