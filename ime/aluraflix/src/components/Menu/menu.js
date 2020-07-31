@@ -12,7 +12,7 @@ function Menu() {
                <img className="Logo" src={logo} alt="aluraflix" />              
             </a>
               
-            <LinkBotao_cstylcmp as="a" href="/"> {/* className="linkBotao" */}
+            <LinkBotao_cstylcmp as="a" href="/cadastro/video"> {/* className="linkBotao" */}
                Novo vídeo
             </LinkBotao_cstylcmp>
         </nav>

@@ -4,15 +4,8 @@ import './index.css';
 import App from './App';
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
+import CadastroVideo from './paginas/cadastro/Video/video_js'
 
-
-function CadastroVideo() {
-  return (
-     <div>
-        Página de Cadastro de Vídeo
-     </div>
-  )
-}
 
 
 ReactDOM.render(
