@@ -1,8 +1,8 @@
-import estilo from 'styled-components'
+import styled from 'styled-components'
 
 
 
-const Botao = estilo.button`
+const Botao = styled.button`
 
         color: var(--branco);
         border: 1px solid var(--branco);
