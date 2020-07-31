@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 import logo from '../../assets/imagens/alura.png'
 import './menu.css'
@@ -8,11 +9,11 @@ import LinkBotao_cstylcmp from '../Btn_stl/btn_stl'
 function Menu() {
     return (
         <nav className="Menu">
-            <a href="/">
+            <Link to="/">
                <img className="Logo" src={logo} alt="aluraflix" />              
-            </a>
+            </Link>
               
-            <LinkBotao_cstylcmp as="a" href="/cadastro/video"> {/* className="linkBotao" */}
+            <LinkBotao_cstylcmp as={Link} to="/cadastro/video" className="linkBotao"> 
                Novo vídeo
             </LinkBotao_cstylcmp>
         </nav>
