@@ -20,7 +20,7 @@ ReactDOM.render(
   <BrowserRouter>
       <Switch>
           <Route path="/cadastro/video" component={CadastroVideo} />
-          <Route path="/" component={App} />
+          <Route path="/" component={App} exact/>
           
       </Switch>
   </BrowserRouter>,
