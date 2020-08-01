@@ -6,7 +6,7 @@ import PaginaDefault from '../../../components/Paginadefault/paginadefault'
 function CadastroVideo() {
     return (
        <PaginaDefault>
-          <h1>Página de Cadastro de Vídeo</h1>
+          <h1>Cadastro de Vídeo</h1>
           <Link to="/cadastro/categoria" >
               Cadastrar Categoria
           </Link>

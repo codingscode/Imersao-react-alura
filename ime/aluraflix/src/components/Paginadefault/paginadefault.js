@@ -2,13 +2,27 @@ import React from 'react'
 
 import Menu from '../Menu/menu'
 import Rodape from '../Rodape/rodape'
+import styled from 'styled-components'
 
 
-function PaginaDefault(props) {  // ou {children}
+const Principal = styled.main`
+     background-color: var(--preto);
+     color: var(--branco);
+     flex: 1;
+     padding-top: 50px;
+     padding-right: 5%;
+     padding-left: 5%;
+`
+
+
+function PaginaDefault({children}) { 
      return (
          <div>
             <Menu />
-             {props.children}   {/* ou {children} */}
+               <Principal>
+                    {children}  
+
+               </Principal>
             <Rodape />
          
          </div>
