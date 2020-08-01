@@ -17,7 +17,7 @@ const Principal = styled.main`
 
 function PaginaDefault({children}) { 
      return (
-         <div>
+         <>
             <Menu />
                <Principal>
                     {children}  
@@ -25,7 +25,7 @@ function PaginaDefault({children}) {
                </Principal>
             <Rodape />
          
-         </div>
+         </>
           
      )
 

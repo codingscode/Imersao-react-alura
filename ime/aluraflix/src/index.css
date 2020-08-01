@@ -31,7 +31,9 @@ a {
 
 #root {
     min-height: 100vh;
-    background: orange;
+    /* background: orange; */
+    display: flex;
+    flex-direction: column;
 }
 
 
