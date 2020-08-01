@@ -14,6 +14,7 @@ vercel.com
 
 digitar no terminal: npm i react-router-dom
 
+digitar no terminal: npm i react-slick
 
 
 
