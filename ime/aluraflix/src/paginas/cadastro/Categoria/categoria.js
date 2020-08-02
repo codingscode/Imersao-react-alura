@@ -5,7 +5,7 @@ import PaginaDefault from '../../../components/Paginadefault/paginadefault'
 
 function CadastroCategoria() {
 
-    let nomeDaCategoria = useState('Filmes')
+    const [nomeDaCategoria, setNomeDaCategoria] = useState('Filmes')
 
     console.log('nomeDaCategoria', nomeDaCategoria)
 
