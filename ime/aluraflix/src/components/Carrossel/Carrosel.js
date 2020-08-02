@@ -28,7 +28,7 @@ function Carrossel({
       <Slider> 
         {videos.map((video, index) => {
           if (ignorar1Video && index === 0) {
-            return null;
+            return null
           }
 
           return (

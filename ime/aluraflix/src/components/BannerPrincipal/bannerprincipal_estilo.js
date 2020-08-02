@@ -116,9 +116,9 @@ export const BotaoWatch = styled.button`
   text-decoration: none;
   display: inline-block;
   border: 1px solid transparent;
-  color: var(--black);
-  background: var(--white);
-  border-color: var(--black);
+  color: var(--preto);
+  background: var(--branco);
+  border-color: var(--preto);
   transition: opacity .3s;
   display: none;
   margin: 0 auto;
