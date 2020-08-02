@@ -1,8 +1,9 @@
 import React from 'react'
-import { ContainerGrupoVideoCard, ListaVideoCard, Titulo, LinkExtra } from './Carrosel_estilo'
+import { ContainerGrupoVideoCard, Titulo, LinkExtra } from './Carrosel_estilo'
 import VideoCard from './components/VideoCard/comp_carrosel'
+import Slider, {SliderItem} from './components/Slider/slider'
 
-function GrupoVideoCard({
+function Carrossel({
   ignorar1Video,
   categoria,
 }) {
@@ -24,25 +25,26 @@ function GrupoVideoCard({
           }
         </>
       )}
-      <ListaVideoCard>
+      <Slider> 
         {videos.map((video, index) => {
           if (ignorar1Video && index === 0) {
             return null;
           }
 
           return (
-            <li key={video.titulo}>
+            <SliderItem key={video.titulo}>
               <VideoCard
                 videoTitle={video.titulo}
                 videoURL={video.url}
                 corCategoria={corCategoria}
               />
-            </li>
+            </SliderItem>
           );
         })}
-      </ListaVideoCard>
+      </Slider> 
     </ContainerGrupoVideoCard>
   );
 }
 
-export default GrupoVideoCard
+export default Carrossel
+ 
