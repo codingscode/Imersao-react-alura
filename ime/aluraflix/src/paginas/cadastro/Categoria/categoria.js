@@ -1,12 +1,18 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import PaginaDefault from '../../../components/Paginadefault/paginadefault'
 
 
 function CadastroCategoria() {
+
+    let nomeDaCategoria = useState('Filmes')
+
+    console.log('nomeDaCategoria', nomeDaCategoria)
+
+
     return (
        <PaginaDefault>
-          <h1>Cadastro de Categoria</h1>
+          <h1>Cadastro de Categoria: </h1>
 
           <form>
                 <label>

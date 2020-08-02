@@ -29,11 +29,12 @@ https://gist.github.com/omariosouto/19dafd5ca155c46b3dcb31df89cfba55
 
 p2:
 https://www.alura.com.br/imersao-react/aula02-roteamento-state?utm_campaign=imersao_react_aula_02&utm_medium=email&utm_source=RD+Station
-1h
+
 
 
 p3:
 https://www.alura.com.br/imersao-react/aula03-formularios-componentes?utm_campaign=imersao_react_aula_03&utm_medium=email&utm_source=RD+Station
+2min
 
 
 p4:
