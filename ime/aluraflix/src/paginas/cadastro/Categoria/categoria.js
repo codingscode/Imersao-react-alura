@@ -15,7 +15,10 @@ function CadastroCategoria() {
           <form>
                 <label>
                     Nome da Categoria:
-                    <input type="text" value={nomeDaCategoria} onChange={(evento) => { console.log('evento', evento)}} />
+                    <input type="text" value={nomeDaCategoria} onChange={(evento) => { 
+                        console.log('evento-target-value', evento.target.value)
+                        
+                    }} />
                 </label>
                 <button>Cadastrar</button>
          </form>
