@@ -5,19 +5,19 @@ import PaginaDefault from '../../../components/Paginadefault/paginadefault'
 
 function CadastroCategoria() {
 
-    const [nomeDaCategoria, setNomeDaCategoria] = useState('Filmes')
+    const [nomeDaCategoria, setNomeDaCategoria] = useState('Valor Inicial')
 
     console.log('nomeDaCategoria', nomeDaCategoria)
 
 
     return (
        <PaginaDefault>
-          <h1>Cadastro de Categoria: </h1>
+          <h1>Cadastro de Categoria: {nomeDaCategoria}</h1>
 
           <form>
                 <label>
                     Nome da Categoria:
-                    <input type="text"/>
+                    <input type="text" value={nomeDaCategoria} />
                 </label>
                 <button>Cadastrar</button>
          </form>
