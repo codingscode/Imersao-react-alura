@@ -12,7 +12,10 @@ function CadastroCategoria() {
        <PaginaDefault>
           <h1>Cadastro de Categoria: {nomeDaCategoria}</h1>
 
-          <form>
+          <form onSubmit={function handleSubmit(evento) {
+                    evento.preventDefault()
+                    console.log('tentativa de envio', evento)
+                }}>
                 <label>
                     Nome da Categoria:
                     <input type="text" value={nomeDaCategoria} onChange={(evento) => { 
@@ -26,7 +29,7 @@ function CadastroCategoria() {
          <ul>
               {categorias.map((cada) => {
                     return (
-                    <li>
+                    <li key={cada}>
                         {cada}
                     </li>
                     )
