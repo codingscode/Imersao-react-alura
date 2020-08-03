@@ -33,7 +33,7 @@ function CadastroCategoria() {
                         valores
                     ])
 
-                    
+                    setValores(valoresIniciais) // se for um objeto vazio dá problema
                 }}>
 
                 <div>
