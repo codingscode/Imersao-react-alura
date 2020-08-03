@@ -12,7 +12,7 @@ function CadastroCategoria() {
        <PaginaDefault>
           <h1>Cadastro de Categoria: {nomeDaCategoria}</h1>
 
-          <form onSubmit={(evento) => {
+          <form style={{background: nomeDaCategoria}} onSubmit={(evento) => {
                     evento.preventDefault()
                     console.log('tentativa de envio', evento)
                     setCategorias([
