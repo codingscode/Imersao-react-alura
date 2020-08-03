@@ -12,6 +12,14 @@ function CadastroCategoria() {
         cor: '#000'
     }
     const [valores, setValores] = useState(valoresIniciais)
+
+    function setarValor(chave, valor) {
+        // chave: nome, descricao, blablá
+        setValores({
+            ...valores,
+            [chave]: valor
+        })
+    }
     
     return (
        <PaginaDefault>
@@ -30,7 +38,7 @@ function CadastroCategoria() {
                         <label>
                             Nome da Categoria:
                             <input type="text" value={valores.nome} onChange={(evento) => { 
-                                setValores(evento.target.value)
+                                setarValor('nome', evento.target.value)
                                 
                             }} />
                         </label>
@@ -39,8 +47,7 @@ function CadastroCategoria() {
                         <label>
                             Descrição:
                             <textarea type="text" value={valores.descricao} onChange={(evento) => { 
-                                setValores(evento.target.value)
-                                
+                                setarValor('descricao', evento.target.value)
                             }} />
                         </label>
                </div>
@@ -48,8 +55,7 @@ function CadastroCategoria() {
                         <label>
                             Cor:
                             <input type="color" value={valores.cor} onChange={(evento) => { 
-                                setValores(evento.target.value)
-                                
+                                setarValor('cor', evento.target.value)
                             }} />
                         </label>
                </div>
