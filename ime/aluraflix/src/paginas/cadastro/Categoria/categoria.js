@@ -4,7 +4,7 @@ import PaginaDefault from '../../../components/Paginadefault/paginadefault'
 
 
 function CadastroCategoria() {
-    const [categorias, setCategorias] = useState(['Teste'])
+    const [categorias, setCategorias] = useState([])
 
     const valoresIniciais = {
         nome: 'algo1',
@@ -32,6 +32,8 @@ function CadastroCategoria() {
                         ...categorias,
                         valores
                     ])
+
+                    
                 }}>
 
                 <div>
@@ -67,7 +69,7 @@ function CadastroCategoria() {
               {categorias.map((cada, indice) => {
                     return (
                     <li key={`${cada}${indice}`}>
-                        {cada}
+                        {cada.nome}    {/* usar a extensão react components no browser */}
                     </li>
                     )
               })}
