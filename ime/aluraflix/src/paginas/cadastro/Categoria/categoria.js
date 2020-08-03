@@ -5,27 +5,32 @@ import PaginaDefault from '../../../components/Paginadefault/paginadefault'
 
 function CadastroCategoria() {
     const [categorias, setCategorias] = useState(['Teste'])
-    const [nomeDaCategoria, setNomeDaCategoria] = useState('Valor Inicial')
 
+    const valoresIniciais = {
+        nome: 'algo1',
+        descricao: 'algo2',
+        cor: '#000'
+    }
+    const [valores, setValores] = useState(valoresIniciais)
     
     return (
        <PaginaDefault>
-          <h1>Cadastro de Categoria: {nomeDaCategoria}</h1>
+          <h1>Cadastro de Categoria: {valores.nome}</h1>
 
-          <form style={{background: nomeDaCategoria}} onSubmit={(evento) => {
+          <form onSubmit={(evento) => {
                     evento.preventDefault()
                     console.log('tentativa de envio', evento)
                     setCategorias([
                         ...categorias,
-                        nomeDaCategoria
+                        valores
                     ])
                 }}>
 
                 <div>
                         <label>
                             Nome da Categoria:
-                            <input type="text" value={nomeDaCategoria} onChange={(evento) => { 
-                                setNomeDaCategoria(evento.target.value)
+                            <input type="text" value={valores.nome} onChange={(evento) => { 
+                                setValores(evento.target.value)
                                 
                             }} />
                         </label>
@@ -33,8 +38,8 @@ function CadastroCategoria() {
                 <div>
                         <label>
                             Descrição:
-                            <textarea type="text" value={nomeDaCategoria} onChange={(evento) => { 
-                                setNomeDaCategoria(evento.target.value)
+                            <textarea type="text" value={valores.descricao} onChange={(evento) => { 
+                                setValores(evento.target.value)
                                 
                             }} />
                         </label>
@@ -42,8 +47,8 @@ function CadastroCategoria() {
                <div>
                         <label>
                             Cor:
-                            <input type="color" value={nomeDaCategoria} onChange={(evento) => { 
-                                setNomeDaCategoria(evento.target.value)
+                            <input type="color" value={valores.cor} onChange={(evento) => { 
+                                setValores(evento.target.value)
                                 
                             }} />
                         </label>
