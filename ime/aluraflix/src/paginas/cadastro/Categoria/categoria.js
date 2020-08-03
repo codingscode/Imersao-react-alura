@@ -20,14 +20,36 @@ function CadastroCategoria() {
                         nomeDaCategoria
                     ])
                 }}>
-                <label>
-                    Nome da Categoria:
-                    <input type="text" value={nomeDaCategoria} onChange={(evento) => { 
-                        setNomeDaCategoria(evento.target.value)
+
+                <div>
+                        <label>
+                            Nome da Categoria:
+                            <input type="text" value={nomeDaCategoria} onChange={(evento) => { 
+                                setNomeDaCategoria(evento.target.value)
+                                
+                            }} />
+                        </label>
+                </div>
+                <div>
+                        <label>
+                            Descrição:
+                            <textarea type="text" value={nomeDaCategoria} onChange={(evento) => { 
+                                setNomeDaCategoria(evento.target.value)
+                                
+                            }} />
+                        </label>
+               </div>
+               <div>
+                        <label>
+                            Cor:
+                            <input type="color" value={nomeDaCategoria} onChange={(evento) => { 
+                                setNomeDaCategoria(evento.target.value)
+                                
+                            }} />
+                        </label>
+               </div>
+               <button>Cadastrar</button>
                         
-                    }} />
-                </label>
-                <button>Cadastrar</button>
          </form>
 
          <ul>
