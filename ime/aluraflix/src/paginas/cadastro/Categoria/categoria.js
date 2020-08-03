@@ -4,7 +4,7 @@ import PaginaDefault from '../../../components/Paginadefault/paginadefault'
 
 
 function CadastroCategoria() {
-
+    const [categorias, setCategorias] = useState(['Teste'])
     const [nomeDaCategoria, setNomeDaCategoria] = useState('Valor Inicial')
 
     
@@ -16,13 +16,22 @@ function CadastroCategoria() {
                 <label>
                     Nome da Categoria:
                     <input type="text" value={nomeDaCategoria} onChange={(evento) => { 
-                        console.log('evento-target-value', evento.target.value)
                         setNomeDaCategoria(evento.target.value)
                         
                     }} />
                 </label>
                 <button>Cadastrar</button>
          </form>
+
+         <ul>
+              {categorias.map((cada) => {
+                    return (
+                    <li>
+                        {cada}
+                    </li>
+                    )
+              })}
+         </ul>
          
           <Link to="/" >
               Ir para Inicio
