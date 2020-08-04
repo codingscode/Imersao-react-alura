@@ -11,7 +11,7 @@ function CadastroCategoria() {
     const valoresIniciais = {
         nome: '',
         descricao: '',
-        cor: ''
+        cor: '#203a46'
     }
     const [valores, setValores] = useState(valoresIniciais)
 

@@ -1,5 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
+
 
 function CampoForm({etiqueta, tipo, valor, mudanca, nome, como}) {
      const campoId = `id_${nome}`
