@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import PaginaDefault from '../../../components/Paginadefault/paginadefault'
 import CampoForm from '../../../components/CampoForm/campoform'
+import Botao from '../../../components/Btn_stl/btn_stl'
 
 
 function CadastroCategoria() {
@@ -38,27 +39,29 @@ function CadastroCategoria() {
                     setValores(valoresIniciais) // se for um objeto vazio dá problema
                 }}>
 
-                <CampoForm valor={valores.nome} nome="nome" mudanca={(evento) => {
+                <CampoForm etiqueta={'Nome da Categoria'} tipo={'text'} valor={valores.nome} nome="nome" mudanca={(evento) => {
                       setarValor(evento.target.getAttribute('name'), evento.target.value) // ou setarValor('nome', evento.target.value)
                    }} />
+
+                {/* <CampoForm etiqueta={'Descrição'} tipo={'text'} valor={valores.descricao} nome="cor" mudanca={(evento) => {
+                      setarValor(evento.target.getAttribute('name'), evento.target.value) 
+                   }} /> */}
                                 
                 <div>
                         <label>
                             Descrição:
                             <textarea type="text" value={valores.descricao} onChange={(evento) => { 
+                                console.log(evento.target.tagName)
                                 setarValor('descricao', evento.target.value)
                             }} />
                         </label>
                </div>
-               <div>
-                        <label>
-                            Cor:
-                            <input type="color" value={valores.cor} onChange={(evento) => { 
-                                setarValor('cor', evento.target.value)
-                            }} />
-                        </label>
-               </div>
-               <button>Cadastrar</button>
+
+               <CampoForm etiqueta={'Cor'} tipo={'color'} valor={valores.cor} nome="cor" mudanca={(evento) => {
+                      setarValor(evento.target.getAttribute('name'), evento.target.value) 
+                   }} />
+
+               <Botao>Cadastrar</Botao>
                         
          </form>
 
