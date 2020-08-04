@@ -67,9 +67,9 @@ function CadastroCategoria() {
          </form>
 
          <ul>
-              {categorias.map((cada, indice) => {
+              {categorias.map((cada) => {
                     return (
-                    <li key={`${cada}${indice}`}>
+                    <li key={`${cada.nome}`}>
                         {cada.nome}    {/* usar a extensão react components no browser */}
                     </li>
                     )
