@@ -1,15 +1,16 @@
 import React, {useState} from 'react'
 import {Link} from 'react-router-dom'
 import PaginaDefault from '../../../components/Paginadefault/paginadefault'
+import CampoForm from '../../../components/CampoForm/campoform'
 
 
 function CadastroCategoria() {
     const [categorias, setCategorias] = useState([])
 
     const valoresIniciais = {
-        nome: 'algo1',
-        descricao: 'algo2',
-        cor: '#000'
+        nome: '',
+        descricao: '',
+        cor: ''
     }
     const [valores, setValores] = useState(valoresIniciais)
 
@@ -20,6 +21,7 @@ function CadastroCategoria() {
             [chave]: valor
         })
     }
+    
     
     return (
        <PaginaDefault>
@@ -36,15 +38,10 @@ function CadastroCategoria() {
                     setValores(valoresIniciais) // se for um objeto vazio dá problema
                 }}>
 
-                <div>
-                        <label>
-                            Nome da Categoria:
-                            <input type="text" value={valores.nome} onChange={(evento) => { 
-                                setarValor('nome', evento.target.value)
+                <CampoForm valor={valores.nome} nome="nome" mudanca={(evento) => {
+                      setarValor(evento.target.getAttribute('name'), evento.target.value) // ou setarValor('nome', evento.target.value)
+                   }} />
                                 
-                            }} />
-                        </label>
-                </div>
                 <div>
                         <label>
                             Descrição:
