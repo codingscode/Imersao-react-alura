@@ -39,11 +39,11 @@ function CadastroCategoria() {
                     setValores(valoresIniciais) // se for um objeto vazio dá problema
                 }}>
 
-                <CampoForm como={'input'} etiqueta={'Nome da Categoria'} tipo={'text'} valor={valores.nome} nome="nome" mudanca={(evento) => {
+                <CampoForm etiqueta={'Nome da Categoria'} tipo={'text'} valor={valores.nome} nome="nome" mudanca={(evento) => {
                       setarValor(evento.target.getAttribute('name'), evento.target.value) // ou setarValor('nome', evento.target.value)
                    }} />
 
-                <CampoForm como={'textarea'} etiqueta={'Descrição'} tipo={'textarea'} valor={valores.descricao} nome="descricao" mudanca={(evento) => {
+                <CampoForm  etiqueta={'Descrição'} tipo={'textarea'} valor={valores.descricao} nome="descricao" mudanca={(evento) => {
                       console.log(evento.target.tagName)
                       setarValor(evento.target.getAttribute('name'), evento.target.value) 
                    }} />
@@ -58,7 +58,7 @@ function CadastroCategoria() {
                         </label>
                 </div> */}
 
-               <CampoForm como={'input'} etiqueta={'Cor'} tipo={'color'} valor={valores.cor} nome="cor" mudanca={(evento) => {
+               <CampoForm  etiqueta={'Cor'} tipo={'color'} valor={valores.cor} nome="cor" mudanca={(evento) => {
                       setarValor(evento.target.getAttribute('name'), evento.target.value) 
                    }} />
 
