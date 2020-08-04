@@ -59,7 +59,7 @@ let Tag = styled.input`
                 border-bottom-color: var(--primario);
             }
             &:focus:not([type="color"]) + span {
-                background: orange;
+                transform: scale(.6) translateY(-10px);
             }
             /* &:focus:not([type='color']) + ${Label.Texto} {
                 transform: scale(.6) translateY(-10px);
