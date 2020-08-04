@@ -58,7 +58,10 @@ let Tag = styled.input`
             &:focus {
                 border-bottom-color: var(--primario);
             }
-            &:focus:not([type='color']) + ${Label.Texto} {
+            &:focus:not([type="color"]) + span {
+                background: orange;
+            }
+            /* &:focus:not([type='color']) + ${Label.Texto} {
                 transform: scale(.6) translateY(-10px);
             }
             ${({ value }) => {
@@ -69,7 +72,7 @@ let Tag = styled.input`
                         }
                     `
                 }
-            }
+            } */
 `
 
 
@@ -87,10 +90,10 @@ function CampoForm({etiqueta, tipo, valor, mudanca, nome}) {
          <CampoFormEnvolvedor>
                 <div>
                     <Label htmlFor={campoId}>
+                        <Tag as={tag} id={campoId} type={tipo} value={valor} name={nome} onChange={mudanca} />
                         <Label.Texto>
                             {etiqueta}:
                         </Label.Texto>
-                        <Tag as={tag} id={campoId} type={tipo} value={valor} name={nome} onChange={mudanca} />
                     </Label>
                 </div>
           </CampoFormEnvolvedor>
