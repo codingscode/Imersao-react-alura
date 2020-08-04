@@ -39,15 +39,16 @@ function CadastroCategoria() {
                     setValores(valoresIniciais) // se for um objeto vazio dá problema
                 }}>
 
-                <CampoForm etiqueta={'Nome da Categoria'} tipo={'text'} valor={valores.nome} nome="nome" mudanca={(evento) => {
+                <CampoForm como={'input'} etiqueta={'Nome da Categoria'} tipo={'text'} valor={valores.nome} nome="nome" mudanca={(evento) => {
                       setarValor(evento.target.getAttribute('name'), evento.target.value) // ou setarValor('nome', evento.target.value)
                    }} />
 
-                {/* <CampoForm etiqueta={'Descrição'} tipo={'text'} valor={valores.descricao} nome="cor" mudanca={(evento) => {
+                <CampoForm como={'textarea'} etiqueta={'Descrição'} tipo={'textarea'} valor={valores.descricao} nome="descricao" mudanca={(evento) => {
+                      console.log(evento.target.tagName)
                       setarValor(evento.target.getAttribute('name'), evento.target.value) 
-                   }} /> */}
+                   }} />
                                 
-                <div>
+                {/* <div>
                         <label>
                             Descrição:
                             <textarea type="text" value={valores.descricao} onChange={(evento) => { 
@@ -55,9 +56,9 @@ function CadastroCategoria() {
                                 setarValor('descricao', evento.target.value)
                             }} />
                         </label>
-               </div>
+                </div> */}
 
-               <CampoForm etiqueta={'Cor'} tipo={'color'} valor={valores.cor} nome="cor" mudanca={(evento) => {
+               <CampoForm como={'input'} etiqueta={'Cor'} tipo={'color'} valor={valores.cor} nome="cor" mudanca={(evento) => {
                       setarValor(evento.target.getAttribute('name'), evento.target.value) 
                    }} />
 
