@@ -90,7 +90,7 @@ function CampoForm({etiqueta, tipo, valor, mudanca, nome}) {
      const tag = eTipotextarea ? 'textarea' : 'input'
 
      const campoId = `id_${nome}`
-     const temValor = valor.length // Boolean(valor.length)
+     const temValor = Boolean(valor.length) 
      
      return (
          <CampoFormEnvolvedor>
