@@ -25,7 +25,7 @@ function CadastroCategoria() {
     
     useEffect(() => {
         console.log('oi oi oi')
-     }, [])
+     })
     
     return (
        <PaginaDefault>
