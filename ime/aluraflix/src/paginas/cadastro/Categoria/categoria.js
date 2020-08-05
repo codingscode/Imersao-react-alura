@@ -68,17 +68,7 @@ function CadastroCategoria() {
                       console.log(evento.target.tagName)
                       setarValor(evento.target.getAttribute('name'), evento.target.value) 
                    }} />
-                                
-                {/* <div>
-                        <label>
-                            Descrição:
-                            <textarea type="text" value={valores.descricao} onChange={(evento) => { 
-                                console.log(evento.target.tagName)
-                                setarValor('descricao', evento.target.value)
-                            }} />
-                        </label>
-                </div> */}
-
+                
                <CampoForm  etiqueta={'Cor'} tipo={'color'} valor={valores.cor} nome="cor" mudanca={(evento) => {
                       setarValor(evento.target.getAttribute('name'), evento.target.value) 
                    }} />
@@ -87,9 +77,12 @@ function CadastroCategoria() {
                         
          </form>
 
-         <div>
-             Carregando...
-         </div>
+          {/* demora 4s */}
+         {categorias.length === 0 &&
+             (<div>
+                  Carregando...
+             </div>)
+         }
 
          <ul>
               {categorias.map((cada) => {
