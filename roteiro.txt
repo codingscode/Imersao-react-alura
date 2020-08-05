@@ -259,6 +259,9 @@ fetch('http://localhost:8080/categorias').then(async (res) => {
 })
 
 
+alteração para: node ./server.js
+      digitar no terminal: npm run dev
+
 
 -------------------------------------------------------------
 
