@@ -64,7 +64,12 @@ let Tag = styled.input`
 
             ${function({hasValue}) {
                 console.log('*', hasValue)
-                return hasValue && 'background: purple !important;'
+                return hasValue &&  css`
+                      &:not([type="color"]) + span {
+                            transform: scale(.6) translateY(-10px);
+                      }
+                      
+                  `    /* 'background: purple !important;' */
             }}
             /* &:focus:not([type='color']) + ${Label.Texto} {
                 transform: scale(.6) translateY(-10px);
