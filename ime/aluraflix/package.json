@@ -18,6 +18,7 @@
   },
   "scripts": {
     "server": "json-server --watch db.json",
+    "dev": "concurrently \"command1 arg\" \"command2 arg\"",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",

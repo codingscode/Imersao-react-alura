@@ -227,8 +227,10 @@ digitar no terminal:  npm run server
 
 
 
+https://www.npmjs.com/package/concurrently
+      "dev": "concurrently \"command1 arg\" \"command2 arg\""
 
-
+npm i --save-dev concurrently
 
 
 -------------------------------------------------------------
