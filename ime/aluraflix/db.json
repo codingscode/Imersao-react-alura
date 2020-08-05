@@ -1,0 +1,18 @@
+{
+    "categorias": [
+        {
+           "id": 1,
+           "nome": "Front End",
+           "descricao": "Uma categoria legal",
+           "cor": "#cbd1ff"
+        }
+    ]
+ 
+}
+
+
+
+
+
+
+
