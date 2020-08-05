@@ -232,6 +232,19 @@ https://www.npmjs.com/package/concurrently
 
 npm i --save-dev concurrently
 
+"dev": "concurrently \"react-scripts start\" \"npm run server\""  ou "dev": "concurrently \"npm start\" \"npm run server\""
+digitar no terminal: npm run dev
+
+      ver:
+          http://localhost:3000/cadastro/categoria
+          http://localhost:8080/categorias
+
+
+
+
+
+
+
 
 -------------------------------------------------------------
 
