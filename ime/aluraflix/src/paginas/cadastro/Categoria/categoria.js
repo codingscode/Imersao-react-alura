@@ -26,7 +26,9 @@ function CadastroCategoria() {
     useEffect(() => {
         console.log('oi oi oi')
 
-        setTimeout(() => {
+        const url_top = 'http://localhost:8080/categorias'
+        fetch(url_top)
+        /* setTimeout(() => {
             setCategorias([
                 ...categorias,
                 {
@@ -42,7 +44,7 @@ function CadastroCategoria() {
                     "cor": "#cbd1ff"
                  } // aparece embaixo de Cadastrar
             ])
-        }, 4000) // 4s
+        }, 4000) // 4s */
      }, [])
     
     return (
