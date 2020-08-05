@@ -239,7 +239,7 @@ digitar no terminal: npm run dev
           http://localhost:3000/cadastro/categoria
           http://localhost:8080/categorias
 
-
+https://reactjs.org/docs/state-and-lifecycle.html#adding-lifecycle-methods-to-a-class
 
 
 

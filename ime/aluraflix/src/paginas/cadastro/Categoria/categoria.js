@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom'
 import PaginaDefault from '../../../components/Paginadefault/paginadefault'
 import CampoForm from '../../../components/CampoForm/campoform'
@@ -23,6 +23,9 @@ function CadastroCategoria() {
         })
     }
     
+    useEffect(() => {
+        console.log('oi oi oi')
+     }, [])
     
     return (
        <PaginaDefault>
@@ -65,6 +68,10 @@ function CadastroCategoria() {
                <Botao>Cadastrar</Botao>
                         
          </form>
+
+         <div>
+             Carregando...
+         </div>
 
          <ul>
               {categorias.map((cada) => {
