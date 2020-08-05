@@ -28,8 +28,10 @@ function CadastroCategoria() {
 
         const url_top = 'http://localhost:8080/categorias'
         fetch(url_top).then(async (res) => {
-            const r = await res.json()
-            console.log(r)
+            const resposta = await res.json()
+            setCategorias([
+                ...resposta,
+            ])
         })
         /* setTimeout(() => {
             setCategorias([
