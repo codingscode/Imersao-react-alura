@@ -25,7 +25,7 @@ function CadastroCategoria() {
     
     useEffect(() => {
         console.log('oi oi oi')
-     })
+     }, [valores.nome])  // o "oi oi oi" só aparece quando o campo nome é alterado
     
     return (
        <PaginaDefault>
