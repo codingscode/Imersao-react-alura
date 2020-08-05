@@ -29,7 +29,18 @@ function CadastroCategoria() {
         setTimeout(() => {
             setCategorias([
                 ...categorias,
-                valores
+                {
+                    "id": 1,
+                    "nome": "Front End",
+                    "descricao": "Uma categoria legal",
+                    "cor": "#cbd1ff"
+                 },
+                 {
+                    "id": 2,
+                    "nome": "Back End",
+                    "descricao": "Outra categoria legal",
+                    "cor": "#cbd1ff"
+                 } // aparece embaixo de Cadastrar
             ])
         }, 4000) // 4s
      }, [])
