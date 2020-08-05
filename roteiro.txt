@@ -262,6 +262,16 @@ fetch('http://localhost:8080/categorias').then(async (res) => {
 alteração para: node ./server.js
       digitar no terminal: npm run dev
 
+digitar no terminal: npm start
+          http://localhost:8080/categorias
+          obs: video4(1&16 -> 1&20)
+ 
+digitar no terminal : npm run dev
+
+
+
+
+
 
 -------------------------------------------------------------
 
