@@ -62,8 +62,8 @@ let Tag = styled.input`
                 transform: scale(.6) translateY(-10px);
             }
 
-            ${function(temValor) {
-                console.log(temValor)
+            ${function({hasValue}) {
+                console.log('*', hasValue)
                 return 'background: purple !important;'
             }}
             /* &:focus:not([type='color']) + ${Label.Texto} {
@@ -90,7 +90,7 @@ function CampoForm({etiqueta, tipo, valor, mudanca, nome}) {
      const tag = eTipotextarea ? 'textarea' : 'input'
 
      const campoId = `id_${nome}`
-     const temValor = valor.length
+     const temValor = valor.length // Boolean(valor.length)
      
      return (
          <CampoFormEnvolvedor>
