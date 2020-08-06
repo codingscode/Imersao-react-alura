@@ -94,8 +94,8 @@ function CadastroCategoria() {
          <ul>
               {categorias.map((cada) => {
                     return (
-                    <li key={`${cada.nome}`}>
-                        {cada.nome}    {/* usar a extensão react components no browser */}
+                    <li key={`${cada.titulo}`}>
+                        {cada.titulo}    {/* usar a extensão react components no browser */}
                     </li>
                     )
               })}
