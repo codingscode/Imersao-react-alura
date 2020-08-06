@@ -5,15 +5,9 @@ import CampoForm from '../../../components/CampoForm/campoform'
 import Botao from '../../../components/Btn_stl/btn_stl'
 
 
-function CadastroCategoria() {
-    const [categorias, setCategorias] = useState([])
 
-    const valoresIniciais = {
-        nome: '',
-        descricao: '',
-        cor: '#203a46'
-    }
-    const [valores, setValores] = useState(valoresIniciais)
+function useForm (valoresIniciais) {
+    const [valores, setValores] = useState(valoresIniciais) 
 
     function setarValor(chave, valor) {
         // chave: nome, descricao, blablá
@@ -22,6 +16,33 @@ function CadastroCategoria() {
             [chave]: valor
         })
     }
+
+    function tratarMudanca(evento) {
+        setarValor(
+           evento.target.getAttribute('name'),
+           evento.target.value
+        )
+    }
+
+    function limparForm() {
+        setValores(valoresIniciais)
+    }
+
+    return {valores, tratarMudanca, limparForm}
+}
+
+
+
+function CadastroCategoria() {
+    const valoresIniciais = {
+        nome: '',
+        descricao: '',
+        cor: '#203a46'
+    }
+
+    const {tratarMudanca, valores, limparForm} = useForm(valoresIniciais)
+    
+    const [categorias, setCategorias] = useState([])
     
     useEffect(() => {
         console.log('oi oi oi')
@@ -64,21 +85,14 @@ function CadastroCategoria() {
                         valores
                     ])
 
-                    setValores(valoresIniciais) // se for um objeto vazio dá problema
+                    limparForm() 
                 }}>
 
-                <CampoForm etiqueta={'Nome da Categoria'} tipo={'text'} valor={valores.nome} nome="nome" mudanca={(evento) => {
-                      setarValor(evento.target.getAttribute('name'), evento.target.value) // ou setarValor('nome', evento.target.value)
-                   }} />
+               <CampoForm etiqueta={'Nome da Categoria'} tipo={'text'} valor={valores.nome} nome="nome" mudanca={tratarMudanca} />
 
-                <CampoForm  etiqueta={'Descrição'} tipo={'textarea'} valor={valores.descricao} nome="descricao" mudanca={(evento) => {
-                      console.log(evento.target.tagName)
-                      setarValor(evento.target.getAttribute('name'), evento.target.value) 
-                   }} />
+               <CampoForm  etiqueta={'Descrição'} tipo={'textarea'} valor={valores.descricao} nome="descricao" mudanca={tratarMudanca} />
                 
-               <CampoForm  etiqueta={'Cor'} tipo={'color'} valor={valores.cor} nome="cor" mudanca={(evento) => {
-                      setarValor(evento.target.getAttribute('name'), evento.target.value) 
-                   }} />
+               <CampoForm  etiqueta={'Cor'} tipo={'color'} valor={valores.cor} nome="cor" mudanca={tratarMudanca} />
 
                <Botao>Cadastrar</Botao>
                         
