@@ -26,7 +26,7 @@ function CadastroCategoria() {
     useEffect(() => {
         console.log('oi oi oi')
 
-        const url_top = 'http://localhost:8080/categorias'
+        const url_top = window.location.hostname.includes('localhost') ? 'http://localhost:8080/categorias' : ''
         fetch(url_top).then(async (res) => {
             const resposta = await res.json()
             setCategorias([

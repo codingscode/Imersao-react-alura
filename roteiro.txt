@@ -268,7 +268,8 @@ digitar no terminal: npm start
  
 digitar no terminal : npm run dev
 
-
+digitar no console da pagina: window.location
+digitar no console da pagina: window.location.hostname.includes('localhost')
 
 
 
