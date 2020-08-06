@@ -272,6 +272,11 @@ digitar no console da pagina: window.location
 digitar no console da pagina: window.location.hostname.includes('localhost')
 
 
+http://localhost:8080/videos
+http://localhost:8080/categorias
+http://localhost:3000
+
+
 
 
 -------------------------------------------------------------
@@ -292,10 +297,10 @@ https://www.alura.com.br/imersao-react/aula03-formularios-componentes?utm_campai
 
 p4:
 https://www.alura.com.br/imersao-react/aula04-ajax-validacao?utm_campaign=imersao_react_aula_04&utm_medium=email&utm_source=RD+Station
-1&7min
+
 
 
 p5:
 https://www.alura.com.br/imersao-react/aula05-gerenciamendo-videos?utm_campaign=imersao_react_aula_05&utm_medium=email&utm_source=RD+Station
-
+0min
 
