@@ -3,33 +3,7 @@ import {Link} from 'react-router-dom'
 import PaginaDefault from '../../../components/Paginadefault/paginadefault'
 import CampoForm from '../../../components/CampoForm/campoform'
 import Botao from '../../../components/Btn_stl/btn_stl'
-
-
-
-function useForm (valoresIniciais) {
-    const [valores, setValores] = useState(valoresIniciais) 
-
-    function setarValor(chave, valor) {
-        // chave: nome, descricao, blablá
-        setValores({
-            ...valores,
-            [chave]: valor
-        })
-    }
-
-    function tratarMudanca(evento) {
-        setarValor(
-           evento.target.getAttribute('name'),
-           evento.target.value
-        )
-    }
-
-    function limparForm() {
-        setValores(valoresIniciais)
-    }
-
-    return {valores, tratarMudanca, limparForm}
-}
+import useForm from '../../../Hooks/useForm'
 
 
 
