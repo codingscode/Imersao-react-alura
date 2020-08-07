@@ -28,10 +28,17 @@ function App() {
   
   return (
     <PaginaDefault>
-        <Menu />
+        {/* <Menu /> */}
 
         {dadosIniciais.length === 0 && (<div>Carregando...</div>)}
-        {dadosIniciais.length}
+        {dadosIniciais.length >= 1 && (
+            <>
+                <BannerPrincipal videoTitulo={dadosIniciais[0].videos[0].titulo} 
+                url={dadosIniciais[0].videos[0].url} videoDescricao={"O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"} />
+        
+                <Carrosel ignorar1Video categoria={dadosIniciais[0]} />
+            </>
+        )}
 
         
         {/* <BannerPrincipal videoTitulo={dadosIniciais.categorias[0].videos[0].titulo} 
