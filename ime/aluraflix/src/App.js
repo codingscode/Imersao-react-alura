@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React, {useEffect, useState} from 'react'
 
 import Menu from './components/Menu/menu'
 import './App.css'
@@ -11,25 +11,29 @@ import repositoriosCategorias from './repositorios/categ'
 
 function App() {
 
-      // http://localhost:8080/categorias?_embed=videos
+      const [dadosIniciais, setDadosIniciais] = useState([])
 
+      // http://localhost:8080/categorias?_embed=videos
       useEffect(() => {
             repositoriosCategorias.acessarTodoscomVideo()
                 .then((categcomvideos) => {
-                 console.log(categcomvideos)
+                  setDadosIniciais(categcomvideos)
                 })
                 .catch((erro) => {
-                  console.log(erro.message)
+                    console.log(erro.message)
                 })
-                
       })
   
-
   return (
     <div className="App">
         <Menu />
+
+        <div style={{color: 'white'}}>
+            {JSON.stringify(dadosIniciais)}
+
+        </div>
         
-        <BannerPrincipal videoTitulo={dadosIniciais.categorias[0].videos[0].titulo} 
+        {/* <BannerPrincipal videoTitulo={dadosIniciais.categorias[0].videos[0].titulo} 
          url={dadosIniciais.categorias[0].videos[0].url} videoDescricao={"O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"} />
 
         <Carrosel ignorar1Video categoria={dadosIniciais.categorias[0]} />
@@ -44,7 +48,7 @@ function App() {
 
         <Carrosel categoria={dadosIniciais.categorias[5]} />      
 
-        <Rodape  />
+        <Rodape  /> */}
     </div>
   );
 }
