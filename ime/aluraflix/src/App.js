@@ -4,6 +4,7 @@ import Menu from './components/Menu/menu'
 import './App.css'
 import dadosIniciais from './data/dados_iniciais.json'
 import BannerPrincipal from './components/BannerPrincipal/bannerprincipal'
+import PaginaDefault from './components/Paginadefault/paginadefault'
 import Carrosel from './components/Carrossel/Carrosel'
 import Rodape from './components/Rodape/rodape'
 import repositoriosCategorias from './repositorios/categ'
@@ -17,7 +18,7 @@ function App() {
       useEffect(() => {
             repositoriosCategorias.acessarTodoscomVideo()
                 .then((categcomvideos) => {
-                  setDadosIniciais(categcomvideos)
+                    setDadosIniciais(categcomvideos)
                 })
                 .catch((erro) => {
                     console.log(erro.message)
@@ -25,13 +26,12 @@ function App() {
       })
   
   return (
-    <div className="App">
+    <PaginaDefault>
         <Menu />
 
-        <div style={{color: 'white'}}>
-            {JSON.stringify(dadosIniciais)}
+        
+        {JSON.stringify(dadosIniciais)}
 
-        </div>
         
         {/* <BannerPrincipal videoTitulo={dadosIniciais.categorias[0].videos[0].titulo} 
          url={dadosIniciais.categorias[0].videos[0].url} videoDescricao={"O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"} />
@@ -49,7 +49,7 @@ function App() {
         <Carrosel categoria={dadosIniciais.categorias[5]} />      
 
         <Rodape  /> */}
-    </div>
+    </PaginaDefault>
   );
 }
 
