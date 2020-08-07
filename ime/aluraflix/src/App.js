@@ -14,9 +14,13 @@ function App() {
       // http://localhost:8080/categorias?_embed=videos
 
       useEffect(() => {
-            repositoriosCategorias.acessarTodoscomVideo().then((categcomvideos) => {
+            repositoriosCategorias.acessarTodoscomVideo()
+                .then((categcomvideos) => {
                  console.log(categcomvideos)
-            })
+                })
+                .catch((erro) => {
+                  console.log(erro.message)
+                })
                 
       })
   
