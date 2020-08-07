@@ -18,6 +18,7 @@ function App() {
       useEffect(() => {
             repositoriosCategorias.acessarTodoscomVideo()
                 .then((categcomvideos) => {
+                    console.log(categcomvideos)
                     setDadosIniciais(categcomvideos)
                 })
                 .catch((erro) => {
@@ -29,7 +30,7 @@ function App() {
     <PaginaDefault>
         <Menu />
 
-        
+        {dadosIniciais.length === 0 && (<div>Carregando...</div>)}
         {JSON.stringify(dadosIniciais)}
 
         
