@@ -13,7 +13,8 @@ function CadastroVideo() {
        <PaginaDefault>
           <h1>Cadastro de Vídeo</h1>
 
-          <form onSubmit={() => {
+          <form onSubmit={(evento) => {
+                evento.preventDefault()
                 alert('Video cadastrado com sucesso')
              }}>
                   <CampoForm etiqueta="Título do Vídeo" nome={"titulo"} valor={valores.titulo} mudanca={tratarMudanca} /> 
