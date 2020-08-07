@@ -68,29 +68,12 @@ let Tag = styled.input`
                       &:not([type="color"]) + span {
                             transform: scale(.6) translateY(-10px);
                       }
-                      
-                  `    /* 'background: purple !important;' */
+                  `
             }}
-            /* &:focus:not([type='color']) + ${Label.Texto} {
-                transform: scale(.6) translateY(-10px);
-            }
-            ${({ value }) => {
-                    const temValor = value.length > 0;
-                    return temValor && css`
-                        &:not([type='color']) + ${Label.Texto} {
-                            transform: scale(.6) translateY(-10px);
-                        }
-                    `
-                }
-            } */
 `
-
-
-
 
 function CampoForm({etiqueta, tipo, valor, mudanca, nome}) {
       
-     
      const eTipotextarea = tipo === 'textarea'
      const tag = eTipotextarea ? 'textarea' : 'input'
 
@@ -108,7 +91,6 @@ function CampoForm({etiqueta, tipo, valor, mudanca, nome}) {
                     </Label>
                 </div>
           </CampoFormEnvolvedor>
-
      )
 }
 
