@@ -31,7 +31,7 @@ function App() {
         <Menu />
 
         {dadosIniciais.length === 0 && (<div>Carregando...</div>)}
-        {JSON.stringify(dadosIniciais)}
+        {dadosIniciais.length}
 
         
         {/* <BannerPrincipal videoTitulo={dadosIniciais.categorias[0].videos[0].titulo} 
