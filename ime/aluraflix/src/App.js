@@ -23,7 +23,7 @@ function App() {
                 .catch((erro) => {
                     console.log(erro.message)
                 })
-      })
+      }, [])  // sem excesso de requisições
   
   return (
     <PaginaDefault>
