@@ -11,15 +11,14 @@ import repositoriosCategorias from './repositorios/categ'
 
 function App() {
 
-  // http://localhost:8080/categorias?_embed=videos
+      // http://localhost:8080/categorias?_embed=videos
 
       useEffect(() => {
-            repositoriosCategorias.acessarTodoscomVideo()
-            
-           
+            repositoriosCategorias.acessarTodoscomVideo().then((categcomvideos) => {
+                 console.log(categcomvideos)
+            })
+                
       })
-   
-
   
 
   return (

@@ -1,29 +1,18 @@
 import config from '../config/config'
 
-//const url_categorias = `${config.url_backend_top}/categorias`
+const url_categorias = `${config.url_backend_top}/categorias`
 
 function acessarTodoscomVideo() {
 
-    console.log(config.url_backend_top)
+    console.log(url_categorias)
 
-   /*  fetch(config.url_backend_top).then(async (res) => {
-                const resposta = await res.json()
-                setCategorias([
-                    ...resposta,
-                ]) 
-            }) */
+    return fetch(url_categorias).then(async (res) => {
+         const resposta = await res.json()
+         return resposta
+    })
 
-
-
-
-    return config.url_backend_top
 }
-
 
 export default {
    acessarTodoscomVideo
 }
-
-
-
-
