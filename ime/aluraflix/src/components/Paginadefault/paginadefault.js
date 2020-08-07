@@ -18,11 +18,11 @@ const Principal = styled.main`
 `
 
 
-function PaginaDefault({children, paddinAll}) { 
+function PaginaDefault({children, paddingAll}) { 
      return (
          <>
             <Menu />
-            <Principal paddinAll = {paddinAll}>
+            <Principal paddingAll = {paddingAll}>
                     {children}  
             </Principal>
             <Rodape />

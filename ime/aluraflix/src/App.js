@@ -18,21 +18,22 @@ function App() {
       useEffect(() => {
             repositoriosCategorias.acessarTodoscomVideo()
                 .then((categcomvideos) => {
-                    console.log(categcomvideos)
+                    console.log(categcomvideos[0].videos[0])
                     setDadosIniciais(categcomvideos)
                 })
                 .catch((erro) => {
                     console.log(erro.message)
                 })
-      }, [])  // sem excesso de requisições
+      }, [])
   
   return (
-    <PaginaDefault paddinAll={0}>
+    <PaginaDefault paddingAll={0}>
         {/* <Menu /> */}
 
         {dadosIniciais.length === 0 && (<div>Carregando...</div>)}
 
         {dadosIniciais.map((categoria, indice) => {
+             console.log('aqui', dadosIniciais)
              if (indice === 0) {
                  return (
                      <div key={categoria.id}>
@@ -70,4 +71,4 @@ function App() {
   );
 }
 
-export default App;
+export default App

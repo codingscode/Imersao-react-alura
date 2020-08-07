@@ -83,7 +83,7 @@ function CadastroCategoria() {
               {categorias.map((cada) => {
                     return (
                     <li key={`${cada.titulo}`}>
-                        {cada.titulo}    {/* usar a extensão react components no browser */}
+                        {cada.titulo}   
                     </li>
                     )
               })}
