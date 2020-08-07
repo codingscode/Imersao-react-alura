@@ -277,7 +277,9 @@ http://localhost:8080/categorias
 http://localhost:3000
 
 
+http://localhost:8080/categorias?_embed=videos
 
+ver http://localhost:3000/
 
 -------------------------------------------------------------
 

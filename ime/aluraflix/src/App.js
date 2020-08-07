@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react'
 
 import Menu from './components/Menu/menu'
 import './App.css'
@@ -6,9 +6,22 @@ import dadosIniciais from './data/dados_iniciais.json'
 import BannerPrincipal from './components/BannerPrincipal/bannerprincipal'
 import Carrosel from './components/Carrossel/Carrosel'
 import Rodape from './components/Rodape/rodape'
+import repositoriosCategorias from './repositorios/categ'
 
 
 function App() {
+
+  // http://localhost:8080/categorias?_embed=videos
+
+      useEffect(() => {
+            repositoriosCategorias.acessarTodoscomVideo()
+            
+           
+      })
+   
+
+  
+
   return (
     <div className="App">
         <Menu />
