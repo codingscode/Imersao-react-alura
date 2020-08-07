@@ -27,7 +27,7 @@ function App() {
       }, [])  // sem excesso de requisições
   
   return (
-    <PaginaDefault>
+    <PaginaDefault paddinAll={0}>
         {/* <Menu /> */}
 
         {dadosIniciais.length === 0 && (<div>Carregando...</div>)}

@@ -2,7 +2,7 @@ import React from 'react'
 
 import Menu from '../Menu/menu'
 import Rodape from '../Rodape/rodape'
-import styled from 'styled-components'
+import styled, {css} from 'styled-components'
 
 
 const Principal = styled.main`
@@ -12,14 +12,17 @@ const Principal = styled.main`
      padding-top: 50px;
      padding-right: 5%;
      padding-left: 5%;
+     ${({paddingAll}) => paddingAll && css`
+         padding: ${paddingAll};
+     `}
 `
 
 
-function PaginaDefault({children}) { 
+function PaginaDefault({children, paddinAll}) { 
      return (
          <>
             <Menu />
-               <Principal>
+               <Principal paddinAll = {paddinAll}>
                     {children}  
 
                </Principal>
