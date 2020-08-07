@@ -31,16 +31,25 @@ function App() {
         {/* <Menu /> */}
 
         {dadosIniciais.length === 0 && (<div>Carregando...</div>)}
-        {dadosIniciais.length >= 1 && (
-            <>
-                <BannerPrincipal videoTitulo={dadosIniciais[0].videos[0].titulo} 
-                url={dadosIniciais[0].videos[0].url} videoDescricao={"O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"} />
-        
-                <Carrosel ignorar1Video categoria={dadosIniciais[0]} />
-            </>
-        )}
 
+        {dadosIniciais.map((categoria, indice) => {
+             if (indice === 0) {
+                 return (
+                     <div key={categoria.id}>
+                          <BannerPrincipal videoTitulo={dadosIniciais[0].videos[0].titulo} 
+                              url={dadosIniciais[0].videos[0].url} videoDescricao={"O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"} />
         
+                          <Carrosel ignorar1Video categoria={dadosIniciais[0]} />
+                     </div>
+                 )
+             }
+
+             return (
+                 <Carrosel key={categoria.id} categoria={categoria} />   
+             )
+        })}
+
+                
         {/* <BannerPrincipal videoTitulo={dadosIniciais.categorias[0].videos[0].titulo} 
          url={dadosIniciais.categorias[0].videos[0].url} videoDescricao={"O que é Front-end? Trabalhando na área os termos HTML, CSS e JavaScript fazem parte da rotina das desenvolvedoras e desenvolvedores. Mas o que eles fazem, afinal? Descubra com a Vanessa!"} />
 

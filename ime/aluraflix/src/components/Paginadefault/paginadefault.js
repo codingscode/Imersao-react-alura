@@ -12,7 +12,7 @@ const Principal = styled.main`
      padding-top: 50px;
      padding-right: 5%;
      padding-left: 5%;
-     ${({paddingAll}) => paddingAll && css`
+     ${({paddingAll}) => css`
          padding: ${paddingAll};
      `}
 `
@@ -22,16 +22,12 @@ function PaginaDefault({children, paddinAll}) {
      return (
          <>
             <Menu />
-               <Principal paddinAll = {paddinAll}>
+            <Principal paddinAll = {paddinAll}>
                     {children}  
-
-               </Principal>
+            </Principal>
             <Rodape />
-         
          </>
-          
      )
-
 }
 
 export default PaginaDefault
