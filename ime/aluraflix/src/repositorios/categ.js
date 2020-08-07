@@ -1,6 +1,6 @@
 import config from '../config/config'
 
-const url_categorias = `${config.url_backend_top}/categorias`
+const url_categorias = `${config.url_backend_top}/categorias?_embed=videos`
 
 function acessarTodoscomVideo() {
 
