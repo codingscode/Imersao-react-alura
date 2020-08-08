@@ -1,21 +1,34 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {Link, useHistory} from 'react-router-dom'
 import PaginaDefault from '../../../components/Paginadefault/paginadefault'
 import useForm from '../../../Hooks/useForm'
 import CampoForm from '../../../components/CampoForm/campoform'
 import Botao from '../../../components/Btn_stl/btn_stl'
 import videosRepositorio from '../../../repositorios/videos_reposit'
+import categoriasRepositorio from '../../../repositorios/categ'
 
 
 function CadastroVideo() {
     const historico = useHistory()
+    const [categorias, setCategorias] = useState([])
     const {tratarMudanca, valores} = useForm({
         titulo: 'Vídeo Padrão',
         url: 'https://www.youtube.com/watch?v=QzDjdlF1BQI',
         categoria: 'Front End'
     })
 
+    useEffect(() => {
+        categoriasRepositorio.acessarTodosdados()
+             .then((categs) => {
+                 
+                 setCategorias(categs)
+             })
+
+    }, [])
+
+    console.log('as categorias:', categorias)
     console.log('video_cadastro***', valores)
+    
     return (
        <PaginaDefault>
           <h1>Cadastro de Vídeo</h1>

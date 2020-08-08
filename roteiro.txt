@@ -281,6 +281,9 @@ http://localhost:8080/categorias?_embed=videos
 
 ver http://localhost:3000/
 
+
+ver http://localhost:3000/cadastro/video
+
 -------------------------------------------------------------
 
 p 1:
@@ -304,5 +307,5 @@ https://www.alura.com.br/imersao-react/aula04-ajax-validacao?utm_campaign=imersa
 
 p5:
 https://www.alura.com.br/imersao-react/aula05-gerenciamendo-videos?utm_campaign=imersao_react_aula_05&utm_medium=email&utm_source=RD+Station
-49min
+1&1min
 
