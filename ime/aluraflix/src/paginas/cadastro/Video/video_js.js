@@ -4,6 +4,8 @@ import PaginaDefault from '../../../components/Paginadefault/paginadefault'
 import useForm from '../../../Hooks/useForm'
 import CampoForm from '../../../components/CampoForm/campoform'
 import Botao from '../../../components/Btn_stl/btn_stl'
+import videosRepositorio from '../../../repositorios/videos_reposit'
+
 
 function CadastroVideo() {
     const historico = useHistory()
@@ -22,7 +24,14 @@ function CadastroVideo() {
                 evento.preventDefault()
                 //eslint-disable-next-line no-alert
                 alert('Video cadastrado com sucesso')
-                historico.push('/')
+
+                videosRepositorio.create({ titulo: valores.titulo, url: valores.url, categoriaId: 1 })
+                    .then(() => {
+                         console.log('cadastrou com sucesso')
+                         historico.push('/')
+
+                    })
+
              }}>
                   <CampoForm etiqueta="Título do Vídeo" nome={"titulo"} valor={valores.titulo} mudanca={tratarMudanca} /> 
                   <CampoForm etiqueta="URL" nome={"url"} valor={valores.url} mudanca={tratarMudanca} /> 
