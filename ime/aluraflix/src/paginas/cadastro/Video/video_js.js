@@ -7,7 +7,11 @@ import Botao from '../../../components/Btn_stl/btn_stl'
 
 function CadastroVideo() {
     const historico = useHistory()
-    const {tratarMudanca, valores} = useForm({})
+    const {tratarMudanca, valores} = useForm({
+        titulo: 'Vídeo Padrão',
+        url: 'https://www.youtube.com/watch?v=QzDjdlF1BQI',
+        categoria: 'Front End'
+    })
 
     console.log('video_cadastro***', valores)
     return (
@@ -21,8 +25,10 @@ function CadastroVideo() {
                 historico.push('/')
              }}>
                   <CampoForm etiqueta="Título do Vídeo" nome={"titulo"} valor={valores.titulo} mudanca={tratarMudanca} /> 
+                  <CampoForm etiqueta="URL" nome={"url"} valor={valores.url} mudanca={tratarMudanca} /> 
+                  <CampoForm etiqueta="Categoria" nome={"categoria"} valor={valores.categoria} mudanca={tratarMudanca} /> 
+                  
                   <Botao type={"submit"}>Cadastrar</Botao>  {/* tinha botado o botão fora errado */}
-          
           </form>
           <br></br>
           <Link to="/cadastro/categoria" >
