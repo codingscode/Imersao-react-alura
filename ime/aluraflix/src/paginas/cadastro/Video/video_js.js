@@ -38,11 +38,16 @@ function CadastroVideo() {
                 //eslint-disable-next-line no-alert
                 alert('Video cadastrado com sucesso')
 
+                const categoriaEscolhida = categorias.find((categ) => {
+                     return categ.titulo === valores.categoria
+                })   // cadastrar algo depois e ver o console
+
+                console.log('categoriaEscolhida:', categoriaEscolhida)
+
                 videosRepositorio.create({ titulo: valores.titulo, url: valores.url, categoriaId: 1 })
                     .then(() => {
                          console.log('cadastrou com sucesso')
                          historico.push('/')
-
                     })
 
              }}>

@@ -192,6 +192,12 @@
       "url": "https://www.youtube.com/watch?v=QzDjdlF1BQI",
       "categoriaId": 1,
       "id": 25
+    },
+    {
+      "titulo": "Curso Javascript free",
+      "url": "https://www.youtube.com/watch?v=PkZNo7MFNFg",
+      "categoriaId": 1,
+      "id": 26
     }
   ]
 }

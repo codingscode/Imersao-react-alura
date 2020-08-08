@@ -284,6 +284,8 @@ ver http://localhost:3000/
 
 ver http://localhost:3000/cadastro/video
 
+em http://localhost:3000/    ver o console
+
 -------------------------------------------------------------
 
 p 1:
