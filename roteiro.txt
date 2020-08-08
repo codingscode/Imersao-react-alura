@@ -304,5 +304,5 @@ https://www.alura.com.br/imersao-react/aula04-ajax-validacao?utm_campaign=imersa
 
 p5:
 https://www.alura.com.br/imersao-react/aula05-gerenciamendo-videos?utm_campaign=imersao_react_aula_05&utm_medium=email&utm_source=RD+Station
-43min
+49min
 
