@@ -56,7 +56,7 @@ function CadastroVideo() {
                   <CampoForm etiqueta="Título do Vídeo" nome={"titulo"} valor={valores.titulo} mudanca={tratarMudanca} /> 
                   <CampoForm etiqueta="URL" nome={"url"} valor={valores.url} mudanca={tratarMudanca} /> 
                   <CampoForm etiqueta="Categoria" nome={"categoria"} valor={valores.categoria} mudanca={tratarMudanca}
-                         sugestoes={['Front End', 'Back End', 'Data Science e Inteligência Artificial', 'Filmes', 'Games']}  /> 
+                         sugestoes={categoriaTitulos}  /> 
                   
                   <Botao type={"submit"}>Cadastrar</Botao>  {/* tinha botado o botão fora errado */}
           </form>
