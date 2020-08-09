@@ -87,14 +87,16 @@ function CampoForm({etiqueta, tipo, valor, mudanca, nome, sugestoes}) {
                     <Label htmlFor={campoId}>
                         <Tag as={tag} hasValue={temValor} id={campoId} type={tipo} value={valor} name={nome} 
                                      onChange={mudanca} list={haSugestoes ? `sugestaopara_${campoId}` : undefined} 
-                                     autoComplete={haSugestoes ? 'off' : undefined}/>
+                                     autoComplete={haSugestoes ? 'off' : 'on'}/>
                         <Label.Texto>
                             {etiqueta}:
                         </Label.Texto>
                         {haSugestoes && (
                             <datalist id={`sugestaopara_${campoId}`}>
                                 {sugestoes.map((sug) => (
-                                    <option value={sug} >{sug}</option>
+                                    <option value={sug} key={`sugestaopara_${campoId}_opcao${sug}`}>
+                                        {sug}
+                                    </option>
                                 ))}
                             </datalist>
                         )}
