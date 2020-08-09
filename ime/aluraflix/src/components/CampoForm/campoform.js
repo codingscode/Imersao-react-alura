@@ -86,7 +86,8 @@ function CampoForm({etiqueta, tipo, valor, mudanca, nome, sugestoes}) {
                 <div>
                     <Label htmlFor={campoId}>
                         <Tag as={tag} hasValue={temValor} id={campoId} type={tipo} value={valor} name={nome} 
-                                     onChange={mudanca} list={`sugestaopara_${campoId}`} autoComplete="off"/>
+                                     onChange={mudanca} list={haSugestoes ? `sugestaopara_${campoId}` : undefined} 
+                                     autoComplete={haSugestoes ? 'off' : undefined}/>
                         <Label.Texto>
                             {etiqueta}:
                         </Label.Texto>
