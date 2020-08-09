@@ -44,7 +44,7 @@ function CadastroVideo() {
 
                 console.log('categoriaEscolhida:', categoriaEscolhida)
 
-                videosRepositorio.create({ titulo: valores.titulo, url: valores.url, categoriaId: 1 })
+                videosRepositorio.create({ titulo: valores.titulo, url: valores.url, categoriaId: categoriaEscolhida.id })
                     .then(() => {
                          console.log('cadastrou com sucesso')
                          historico.push('/')
