@@ -11,6 +11,7 @@ import categoriasRepositorio from '../../../repositorios/categ'
 function CadastroVideo() {
     const historico = useHistory()
     const [categorias, setCategorias] = useState([])
+    const categoriaTitulos = categorias.map(({titulo}) => titulo)
     const {tratarMudanca, valores} = useForm({
         titulo: 'Vídeo Padrão',
         url: 'https://www.youtube.com/watch?v=QzDjdlF1BQI',
@@ -28,6 +29,7 @@ function CadastroVideo() {
 
     console.log('as categorias:', categorias)
     console.log('video_cadastro***', valores)
+    console.log('titulo de categorias:', categoriaTitulos)
     
     return (
        <PaginaDefault>
