@@ -78,24 +78,25 @@ function CampoForm({etiqueta, tipo, valor, mudanca, nome, sugestoes}) {
      const tag = eTipotextarea ? 'textarea' : 'input'
 
      const campoId = `id_${nome}`
-     const temValor = Boolean(valor.length) 
+     const temValor = Boolean(valor.length)
+     const haSugestoes = Boolean(sugestoes.length) 
      
      return (
          <CampoFormEnvolvedor>
                 <div>
                     <Label htmlFor={campoId}>
                         <Tag as={tag} hasValue={temValor} id={campoId} type={tipo} value={valor} name={nome} 
-                                     onChange={mudanca} list={`sugestaopara_${campoId}`} />
+                                     onChange={mudanca} list={`sugestaopara_${campoId}`} autoComplete="off"/>
                         <Label.Texto>
                             {etiqueta}:
                         </Label.Texto>
-                        <datalist id={`sugestaopara_${campoId}`}>
-                             {sugestoes.map((sug) => (
-                                 <option value={sug} >{sug}</option>
-
-                             ))}
-
-                        </datalist>
+                        {haSugestoes && (
+                            <datalist id={`sugestaopara_${campoId}`}>
+                                {sugestoes.map((sug) => (
+                                    <option value={sug} >{sug}</option>
+                                ))}
+                            </datalist>
+                        )}
                     </Label>
                 </div>
           </CampoFormEnvolvedor>
@@ -106,7 +107,7 @@ CampoForm.defaultProps = {
     tipo: 'text',
     valor: '',
     mudanca: () => {},
-    sugestoes: ['Front End', 'Back End']
+    sugestoes: []
 }
 
 CampoForm.propTypes = {
