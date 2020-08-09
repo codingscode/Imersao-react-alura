@@ -72,7 +72,7 @@ let Tag = styled.input`
             }}
 `
 
-function CampoForm({etiqueta, tipo, valor, mudanca, nome}) {
+function CampoForm({etiqueta, tipo, valor, mudanca, nome, sugestoes}) {
       
      const eTipotextarea = tipo === 'textarea'
      const tag = eTipotextarea ? 'textarea' : 'input'
@@ -84,10 +84,18 @@ function CampoForm({etiqueta, tipo, valor, mudanca, nome}) {
          <CampoFormEnvolvedor>
                 <div>
                     <Label htmlFor={campoId}>
-                        <Tag as={tag} hasValue={temValor} id={campoId} type={tipo} value={valor} name={nome} onChange={mudanca} />
+                        <Tag as={tag} hasValue={temValor} id={campoId} type={tipo} value={valor} name={nome} 
+                                     onChange={mudanca} list={`sugestaopara_${campoId}`} />
                         <Label.Texto>
                             {etiqueta}:
                         </Label.Texto>
+                        <datalist id={`sugestaopara_${campoId}`}>
+                             {sugestoes.map((sug) => (
+                                 <option value={sug} >{sug}</option>
+
+                             ))}
+
+                        </datalist>
                     </Label>
                 </div>
           </CampoFormEnvolvedor>
@@ -98,7 +106,7 @@ CampoForm.defaultProps = {
     tipo: 'text',
     valor: '',
     mudanca: () => {},
-    
+    sugestoes: ['Front End', 'Back End']
 }
 
 CampoForm.propTypes = {
@@ -107,7 +115,7 @@ CampoForm.propTypes = {
     valor: PropTypes.string.isRequired,
     nome: PropTypes.string,
     mudanca: PropTypes.func.isRequired,
-    
+    sugestoes: PropTypes.arrayOf(PropTypes.string)
 }
 
 export default CampoForm
